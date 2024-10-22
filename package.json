@@ -1,0 +1,27 @@
+{
+  "name": "braceteria",
+  "version": "1.0.0",
+  "description": "Web app to take the orders of the clients",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedroivo1600/braceteria.git"
+  },
+  "author": "Pedro Ivo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedroivo1600/braceteria/issues"
+  },
+  "homepage": "https://github.com/Pedroivo1600/braceteria#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
