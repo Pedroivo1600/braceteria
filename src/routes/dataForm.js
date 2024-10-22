@@ -17,7 +17,7 @@ router.post('/collect_data', async (req, res) => {
 
         // Trate a resposta do servidor Flask conforme necessário
         console.log(response.data);
-        res.send('Pedido enviado para o robô!');
+        res.redirect('/');
     } catch (error) {
         console.error(error);
         res.status(500).send('Erro ao enviar pedido para o robô.');
