@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css">
-    <link type="text/css" rel="stylesheet" href="/stylesheets/data.css">
+    <!-- <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css"> -->
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css">
 </head>
 <body>
-    Hello World!
+    <header>
+        <h1>Bem-vindo ao Sorvete do Robô!</h1>
+        <p>Escolha o seu sabor, cobertura e topping.</p>
+    </header>
+    
+    <main>
+        <form id="sorvete-form" action="/collect_data" method="post">
+            <div class="campo">
+                <label for="sabor">Escolha o sabor do sorvete:</label>
+                <select id="sabor" name="sabor" required>
+                    <option value="">Selecione um sabor</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="baunilha">Baunilha</option>
+                    <option value="morango">Morango</option>
+                    <option value="limão">Limão</option>
+                </select>
+            </div>
+            
+            <div class="campo">
+                <label for="cobertura">Escolha a cobertura:</label>
+                <select id="cobertura" name="cobertura" required>
+                    <option value="">Selecione uma cobertura</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="caramelo">Caramelo</option>
+                    <option value="frutas">Frutas</option>
+                    <option value="sem_cobertura">Sem cobertura</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="topping">Escolha um topping:</label>
+                <select id="topping" name="topping" required>
+                    <option value="">Selecione um topping</option>
+                    <option value="granola">Granola</option>
+                    <option value="confete">Confete</option>
+                    <option value="nozes">Nozes</option>
+                    <option value="coco">Coco</option>
+                </select>
+            </div>
+            <button type="submit">Servir Sorvete</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sorvete do Robô. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

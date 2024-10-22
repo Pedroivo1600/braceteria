@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Pedroivo1600/braceteria#readme",
   "dependencies": {
+    "axios": "^1.7.7",
     "ejs": "^3.1.10",
     "express": "^4.21.1"
   },

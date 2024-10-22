@@ -3,6 +3,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 const mainRouter = require('./src/routes/main')
+const dataRouter = require('./src/routes/dataForm')
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: false })); //middleware para entender requisição via form (post)
 
 app.use('/', mainRouter);
+app.use('/', dataRouter)
 
 
 app.listen(3000, () => {
