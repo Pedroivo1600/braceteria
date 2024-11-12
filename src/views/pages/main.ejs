@@ -14,15 +14,14 @@
     </header>
     
     <main>
-        <form id="sorvete-form" action="/collect_data" method="post">
+        <form id="sorvete-form" action="/collect_data" method="post" onsubmit="teste(event)">
             <div class="campo">
-                <label for="sabor">Escolha o sabor do sorvete:</label>
-                <select id="sabor" name="sabor" required>
-                    <option value="">Selecione um sabor</option>
-                    <option value="chocolate">Chocolate</option>
-                    <option value="baunilha">Baunilha</option>
-                    <option value="morango">Morango</option>
-                    <option value="limão">Limão</option>
+                <label for="tamanho">Selecione o tamanho do sovete</label>
+                <select id="tamanho" name="tamanho" required>
+                    <option value="">Selecione um tamanho</option>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
                 </select>
             </div>
             
@@ -44,10 +43,10 @@
                     <option value="granola">Granola</option>
                     <option value="confete">Confete</option>
                     <option value="nozes">Nozes</option>
-                    <option value="coco">Coco</option>
+                    <option value="sem_topping">Sem topping</option>
                 </select>
             </div>
-            <button type="submit">Servir Sorvete</button>
+            <button id="submit-btn" type="submit" >Servir Sorvete</button>
         </form>
     </main>
 
@@ -55,4 +54,8 @@
         <p>&copy; 2024 Sorvete do Robô. Todos os direitos reservados.</p>
     </footer>
 </body>
+<!-- Incluindo a biblioteca cliente do Socket.IO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+<script src="/scripts/main.js"></script>
 </html>

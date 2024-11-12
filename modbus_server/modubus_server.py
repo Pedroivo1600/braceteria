@@ -24,21 +24,3 @@ except:
 
 
 
-from flask import Flask, request, render_template
-
-app = Flask(__name__)
-
-
-@app.route('/collect_data', methods=['POST'])
-def collect_data():
-    sabor = request.form.get('sabor')
-    cobertura = request.form.get('cobertura')
-    topping = request.form.get('topping')
-
-    # Aqui você pode fazer algo com os dados recebidos, como imprimir ou armazenar em um banco de dados
-    print(f"Sabor: {sabor}, Cobertura: {cobertura}, Topping: {topping}")
-
-    return "Pedido recebido!"
-
-if __name__ == '__main__':
-    app.run(debug=True)
