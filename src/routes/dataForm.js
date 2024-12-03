@@ -5,14 +5,15 @@ const router = express.Router();
 
 
 router.post('/collect_data', async (req, res) => {
-    const { tamanho, cobertura, topping } = req.body;
+    const { porcoes_flocos, porcoes_baunilha } = req.body;
+
+    // const response = await axios.post('http://127.0.0.1:5000/receive_data', {
 
     try {
         // Envia os dados para o servidor Flask
-        const response = await axios.post('http://127.0.0.1:5000/receive_data', {
-            tamanho,
-            cobertura,
-            topping
+        const response = await axios.post('http://10.102.1.202:5000/receive_data', {
+            porcoes_flocos,
+            porcoes_baunilha
         });
 
         // Trate a resposta do servidor Flask conforme necessário

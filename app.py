@@ -20,7 +20,6 @@ SERVER_ADDRESS = '10.103.16.11'
 SERVER_PORT = 502
 server = ModbusServer(SERVER_ADDRESS, SERVER_PORT, no_block = True)
 
-robot_busy = False
 
 def connect_to_modbusServer(data):
 
@@ -29,7 +28,7 @@ def connect_to_modbusServer(data):
     tamanho = [int(data["tamanho"])]
     cobertura = [int(data["cobertura"])]
     topping = [int(data["topping"])]
-    start_process = [False]
+    start_process = [True]
     
     try:
  
@@ -38,7 +37,8 @@ def connect_to_modbusServer(data):
         server.start()
         print('teste')
         # print(help(server.data_bank.get_coils))
-        robo_ocupado = server.data_bank.get_coils(0)
+        #robo_ocupado = server.data_bank.get_coils(0)
+        robo_ocupado = True
 
         #server.data_bank.get_holding_registers
         
@@ -65,7 +65,7 @@ def connect_to_modbusServer(data):
 def get_variable():
     print('estou aquiiii')
     # Retorna o valor da variável global
-    return jsonify({"variable_value": robot_busy})
+    return jsonify({"variable_value": False})
 
 
 @app.route('/receive_data', methods=['POST'])

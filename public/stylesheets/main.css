@@ -26,6 +26,8 @@ label {
 }
 
 select {
+    -webkit-appearance: none; /* Remove seta padrão */
+    appearance: none;
     padding: 10px;
     width: 100%;
     max-width: 300px;
@@ -50,4 +52,52 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.start-btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Reduzimos a altura para evitar rolagem */
+    margin-top: 10px; /* Pequeno espaçamento em cima */
+}
+
+.start-btn-div button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn-div button:hover {
+    background-color: #e64a19;
+}
+
+.wait-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Reduzimos a altura para evitar rolagem */
+    margin-top: 10px; /* Pequeno espaçamento em cima */
+    width: 100%;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+
+}
+
+.wait-div iframe {
+    pointer-events: none;
+    width: 100%; /* Faz com que o iframe se ajuste à largura da div */
+    max-height: 80%; /* Faz com que o iframe se ajuste à altura da div */
+}
+
+.aguarde-msg {
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-top: 5px; /* Espaço entre o gif e a mensagem */
+    font-weight: bold;
+    color: #333; /* Ajuste a cor conforme a paleta do seu app */
+    text-align: center;
 }

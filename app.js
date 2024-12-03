@@ -19,6 +19,13 @@ app.use('/', mainRouter);
 app.use('/', dataRouter)
 
 
-app.listen(3000, () => {
-    console.log('Servidor foi iniciado')
-})
+// app.listen(3000, () => {
+//     console.log('Servidor foi iniciado')
+// })
+
+const HOST = '10.102.1.202'; // IP no qual o servidor vai rodar
+const PORT = 30200;         // Porta que o servidor vai usar
+
+app.listen(PORT, HOST, () => {
+    console.log(`Servidor foi iniciado em http://${HOST}:${PORT}`);
+});

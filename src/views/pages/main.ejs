@@ -9,49 +9,69 @@
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Sorvete do Robô!</h1>
+        <h1>Bem-vindo à Sorveteria Braço di Latte!</h1>
         <p>Escolha o seu sabor, cobertura e topping.</p>
     </header>
     
     <main>
-        <form id="sorvete-form" action="/collect_data" method="post" onsubmit="teste(event)">
-            <div class="campo">
-                <label for="tamanho">Selecione o tamanho do sovete</label>
-                <select id="tamanho" name="tamanho" required>
-                    <option value="">Selecione um tamanho</option>
-                    <option value="pequeno">Pequeno</option>
-                    <option value="medio">Médio</option>
-                    <option value="grande">Grande</option>
-                </select>
-            </div>
-            
-            <div class="campo">
-                <label for="cobertura">Escolha a cobertura:</label>
-                <select id="cobertura" name="cobertura" required>
-                    <option value="">Selecione uma cobertura</option>
-                    <option value="chocolate">Chocolate</option>
-                    <option value="caramelo">Caramelo</option>
-                    <option value="frutas">Frutas</option>
-                    <option value="sem_cobertura">Sem cobertura</option>
-                </select>
-            </div>
 
-            <div class="campo">
-                <label for="topping">Escolha um topping:</label>
-                <select id="topping" name="topping" required>
-                    <option value="">Selecione um topping</option>
-                    <option value="granola">Granola</option>
-                    <option value="confete">Confete</option>
-                    <option value="nozes">Nozes</option>
-                    <option value="sem_topping">Sem topping</option>
-                </select>
-            </div>
-            <button id="submit-btn" type="submit" >Servir Sorvete</button>
-        </form>
+        <div class="start-btn-div" id="start-div">
+            
+            <button onclick="mostrarFormulario()">Iniciar Pedido</button>
+            
+        </div>
+        
+
+        <div class="wait-div" id="wait-div" style="display: none;">
+            
+            <iframe src="https://giphy.com/embed/cAvKiwKuPR2StTWV7K" height="480" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+            <p class="aguarde-msg">Aguarde...</p>
+            
+        </div>
+
+        <div class="main-form" id="form-div" style="display: none;">
+            <form id="sorvete-form" action="/collect_data" method="post" onsubmit="teste(event)">
+                <div class="campo">
+                    <label for="porcoes_flocos">Número de porções de flocos</label>
+                    <select id="porcoes_flocos" name="porcoes_flocos" required>
+                        <option value="">Selecione o número de porções</option>
+                        <option value="zero">0</option>
+                        <option value="um">1</option>
+                        <option value="dois">2</option>
+                        <option value="tres">3</option>
+                    </select>
+                </div>
+    
+                <div class="campo">
+                    <label for="porcoes_baunilha">Número de porções de baunilha</label>
+                    <select id="porcoes_baunilha" name="porcoes_baunilha" required>
+                        <option value="">Selecione o número de porções</option>
+                        <option value="zero">0</option>
+                        <option value="um">1</option>
+                        <option value="dois">2</option>
+                        <option value="tres">3</option>
+                    </select>
+                </div>
+                
+                <!-- <div class="campo">
+                    <label for="cobertura">Escolha a cobertura:</label>
+                    <select id="cobertura" name="cobertura" required>
+                        <option value="">Selecione uma cobertura</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="caramelo">Caramelo</option>
+                        <option value="frutas">Frutas</option>
+                        <option value="sem_cobertura">Sem cobertura</option>
+                    </select>
+                </div> -->
+    
+                <button id="submit-btn" type="submit" >Servir Sorvete</button>
+            </form>
+        </div>
+        
     </main>
 
     <footer>
-        <p>&copy; 2024 Sorvete do Robô. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Braço di Latte. Todos os direitos reservados.</p>
     </footer>
 </body>
 <!-- Incluindo a biblioteca cliente do Socket.IO -->
